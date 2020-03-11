@@ -1,0 +1,15 @@
+{
+  "parameters": {
+    "anim_cycle": ["/", "#cycle_length"]
+  },
+  "clips": {
+    "play": ["apply", "examplemod:block/teanimtesr@play", "#anim_cycle"],
+    "stop": "examplemod:block/teanimtesr@stop"
+  },
+  "states": ["stop", "play"],
+  "transitions": {
+    "play": ["stop"],
+    "stop": ["play"]
+  },
+  "start_state": "play"
+}

@@ -1,0 +1,57 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube"
+  },
+  "variants": {
+    "inventory": [{
+      "textures": {
+        "particle": "examplemod:blocks/te/machine/top",
+        "down": "examplemod:blocks/te/machine/bottom",
+        "up": "examplemod:blocks/te/machine/top",
+        "north": "examplemod:blocks/te/machine/side",
+        "south": "examplemod:blocks/te/machine/side",
+        "west": "examplemod:blocks/te/machine/side",
+        "east": "examplemod:blocks/te/machine/off"
+      }
+    }],
+    "running": {
+      "false": {
+        "textures": {
+          "particle": "examplemod:blocks/te/lifecycle/top",
+          "down": "examplemod:blocks/te/lifecycle/bottom",
+          "up": "examplemod:blocks/te/lifecycle/top",
+          "north": "examplemod:blocks/te/lifecycle/side",
+          "south": "examplemod:blocks/te/lifecycle/side",
+          "west": "examplemod:blocks/te/lifecycle/side",
+          "east": "examplemod:blocks/te/lifecycle/off"
+        }
+      },
+      "true": {
+        "textures": {
+          "particle": "examplemod:blocks/te/lifecycle/top",
+          "down": "examplemod:blocks/te/lifecycle/bottom",
+          "up": "examplemod:blocks/te/lifecycle/top",
+          "north": "examplemod:blocks/te/lifecycle/side",
+          "south": "examplemod:blocks/te/lifecycle/side",
+          "west": "examplemod:blocks/te/lifecycle/side",
+          "east": "examplemod:blocks/te/lifecycle/on"
+        }
+      }
+    },
+    "facing": {
+      "north": {
+        "y": 90
+      },
+      "east": {
+        "y": 180
+      },
+      "south": {
+        "y": 270
+      },
+      "west": {
+        "y": 0
+      }
+    }
+  }
+}

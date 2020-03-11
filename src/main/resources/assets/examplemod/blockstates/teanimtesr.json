@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "examplemod:animtesr"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

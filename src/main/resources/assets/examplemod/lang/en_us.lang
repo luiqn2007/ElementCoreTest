@@ -1,0 +1,52 @@
+# tab
+itemGroup.blocks=ElementCoreTest Blocks
+itemGroup.tab2=ElementCoreTest Items
+itemGroup.oreTab=ElementCoreTest OreName: Apple
+# block
+tile.examplemod.simpleblocknotab.name=Block(No Parameters)
+tile.examplemod.simpleblock0.name=Block with CreativeTab
+tile.examplemod.simpleblock1.name=Block with registerName
+tile.examplemod.sblock2.name=Block with unlocalizedName
+tile.examplemod.blockharvestlevel.name=Block with HarvestLevel
+tile.examplemod.blockgen.name=Block with WorldGen
+tile.examplemod.blockgenobj.name=Block with WorldGenObj
+tile.examplemod.blockmap.name=Block with StateMap
+tile.examplemod.blockmapper.name=Block with StateMapper
+tile.examplemod.colorblock0.name=Block with BlockColor
+tile.examplemod.colorblock1.name=Block with ModColor
+tile.examplemod.colorblock2.name=Block with ModColorObj
+tile.examplemod.colorblockmix0.name=Block with BlockColor and ModColor
+tile.examplemod.colorblockmix1.name=Block with ModColor and ModColorObj
+tile.examplemod.colorblockmix2.name=Block with ModColorObj and BlockColor
+tile.examplemod.appleblock.name=Block with OreName apple
+tile.examplemod.te.name=Block with SimpleTe
+tile.examplemod.tebase.name=Block extend BlockTileBase
+tile.examplemod.tedismantle.name=Block with IDismantleBlock
+tile.examplemod.temachine.name=Block with BaseTileEntity
+tile.examplemod.tegui.name=Block with GUI
+tile.examplemod.teitem.name=Block with ItemHandler
+tile.examplemod.tefluid.name=Block with FluidHandler
+tile.examplemod.teenergy.name=Block with Energy
+tile.examplemod.telifecycle.name=Block with Lifecycle
+tile.examplemod.terecipe.name=Block with Recipe
+tile.examplemod.tetiletesr.name=Block with ITileTESR
+tile.examplemod.tetesr.name=Block with TESR
+tile.examplemod.teanimtesr.name=Block with AnimTESR
+# command
+command.examplemod.server=Test: all, chunk, player
+command.examplemod.server.all=get all entity in world
+command.examplemod.server.chunk=get all entity in chunk
+command.examplemod.server.plater=get all player in world
+command.examplemod.client=Test capability
+# key
+key.test.net=Key to Test Net
+key.test.key=Key to Test Key
+# fluid
+fluid.examplemod.fluid0=Fluid 0
+tile.examplemod.fluid0.name=Fluid 0
+fluid.examplemod.fluid1=Fluid 1
+tile.examplemod.fluid1.name=Fluid 1
+fluid.examplemod.fluid2=Fluid 2
+tile.examplemod.fluid2.name=Fluid 2
+fluid.examplemod.fluid3=Fluid 3
+tile.examplemod.fluid3.name=Fluid 3
