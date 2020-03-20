@@ -1,50 +1,34 @@
 package com.example.examplemod.entity;
 
 import com.elementtimes.elementcore.api.annotation.ModEntity;
-import com.elementtimes.elementcore.api.annotation.part.Method2;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ResourceLocation;
+import com.elementtimes.elementcore.api.annotation.part.*;
+import com.example.examplemod.ExampleMod;
+import com.example.examplemod.group.Groups;
+import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.world.World;
-import net.minecraft.world.storage.loot.LootTableList;
 
 import javax.annotation.Nullable;
 
-@ModEntity(id = "0", name = "test",
-        eggColorPrimary = 0xFFAABBCC, eggColorSecondary = 0xFF001122,
-        canSpawn = true, spawnWeight = 5, spawnMin = 3, spawnMax = 10,
-        render = @Method2("com.example.examplemod.entity.TestEntityRenderer"))
-public class TestEntity extends EntityLiving {
+@ModEntity(create = @Method(TestEntity.class), renderer = @Method2("com.example.examplemod.entity.TestEntityRenderer"))
+@ModEntity.Egg(primary = 0xFFAAAAAA, secondary = 0xFF000000,
+        prop = @ItemProps(group = @Getter(value = Groups.class, name = "main")))
+@ModEntity.Spawn(@EntitySpawn(biome = @Biome("plain")))
+public class TestEntity extends AnimalEntity {
 
     public TestEntity(World worldIn) {
-        super(worldIn);
+        this((EntityType<? extends AnimalEntity>) ExampleMod.CONTAINER.elements.generatedEntityTypes.get(TestEntity.class), worldIn);
     }
 
-    @Override
-    protected void initEntityAI() {
-        super.initEntityAI();
-        this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
-        this.tasks.addTask(2, new EntityAILookIdle(this));
+    public TestEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
+        super(type, worldIn);
+        System.out.println("spawn " + this);
     }
-
-    @Override
-    protected void applyEntityAttributes() {
-        super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(4.0D);
-        getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.25D);
-    }
-
-    @Override
-    public void fall(float distance, float damageMultiplier) { }
 
     @Nullable
     @Override
-    protected ResourceLocation getLootTable() {
-        return LootTableList.ENTITIES_CHICKEN;
+    public AgeableEntity createChild(AgeableEntity ageable) {
+        return new TestEntity(world);
     }
 }

@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "normal": { "model": "examplemod:blockmapper0" },
-    "m1": { "model": "examplemod:blockmapper0" },
-    "m2": { "model": "examplemod:blockmapper1" }
-  }
-}
